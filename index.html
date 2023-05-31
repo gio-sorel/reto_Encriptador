@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Desafio Alura | Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="skymod.css">
+    <link rel="stylesheet" href="style.css">    
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+        <!-- <img class="logo" src="imag/Logo.png" alt="logo Alura"> -->
+        
+        <svg id="stars" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000"></svg>
+        <!-- BARRA DIA NOCHE -->
+        <label class="daynight">
+        <input type="range" min="0" max="100" value="80" id="daynight" class="daynight-input">
+        <span class="daynight-icons">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 17h1m16 0h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7m-9.7 5.7a4 4 0 0 1 8 0"></path>
+            <path d="M3 21l18 0"></path>
+          </svg>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+            <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+            </svg>
+          <svg viewBox="0 0 24 24">		
+            <path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"></path>
+            <path d="M6.343 17.657l-1.414 1.414"></path>
+            <path d="M6.343 6.343l-1.414 -1.414"></path>
+            <path d="M17.657 6.343l1.414 -1.414"></path>
+            <path d="M17.657 17.657l1.414 1.414"></path>
+            <path d="M4 12h-2"></path>
+            <path d="M12 4v-2"></path>
+            <path d="M20 12h2"></path>
+            <path d="M12 20v2"></path>
+          </svg>
+            <svg viewBox="0 0 24 24">
+            <path d="M3 13h1"></path>
+            <path d="M20 13h1"></path>
+            <path d="M5.6 6.6l.7 .7"></path>
+            <path d="M18.4 6.6l-.7 .7"></path>
+            <path d="M8 13a4 4 0 1 1 8 0"></path>
+            <path d="M3 17h18"></path>
+            <path d="M7 20h5"></path>
+            <path d="M16 20h1"></path>
+            <path d="M12 5v-1"></path>
+          </svg>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+            <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+            <path d="M19 11h2m-1 -1v2"></path>
+          </svg>
+        </span>
+      </label>
+    </header>
+    <main>
+        <section>
+            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div>
+                <h6 class="informacion">Solo letras minusculas y sin acentos</h6>
+            </div>
+            <div class="botones">
+                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        <section>
+            <textarea class="mensaje" cols="30" rows="10"></textarea>
+            <div class="botones">
+                <button class="btn-copiar" onclick="copyToClipboard()">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul class="wrapper">
+
+          <a href="https://www.linkedin.com/in/soreltorres/" target="_blank">
+            <li class="icon linkedin">
+              <span class="tooltip">LinkedIn</span>
+              <span><i class="fab fa-linkedin-in"></i></span>
+            </li>
+          </a>
+
+          <a href="https://app.aluracursos.com/user/gio-sorel" target="_blank">
+            <li class="icon alura">
+              <span class="tooltip">Alura</span>
+              <span><i class="fa fa-user"></i></span>
+            </li>
+          </a>
+
+            <a href="https://github.com/gio-sorel" target="_blank">
+              <li class="icon github">              
+                <span class="tooltip">Github</span>
+                <span><i class="fab fa-github"></i></span>            
+              </li>              
+            </a>            
+        </ul>
+        <p class="name-foot">&copy Sorel Torres ' 2023</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

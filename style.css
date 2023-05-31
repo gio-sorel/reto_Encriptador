@@ -1,0 +1,236 @@
+*{
+    /* background: #F3F5FC; */
+    font-family: 'inter';    
+    font-weight: 400px;
+    font-size: 32px;
+    line-height: 150%;    
+    box-sizing: border-box;
+}
+
+.logo{
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 1.5%;
+}
+
+main{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 180px;
+}
+
+.text-area {
+    /* background-color: hsla(0, 0%, 0%, 0.15); */
+    background: none;
+    border: transparent;
+    color: white !important;
+    margin-top: 10px;
+    border-radius: 24px;
+    text-transform: lowercase;
+}
+
+::placeholder { color: white; } /* pseudo etiqueta */
+    .text-area:focus {
+    outline: none;
+}
+.informacion:before{
+  content: " ⚠ ";
+}
+
+.mensaje{
+    height: 630;
+    background: none;
+    /* background-color: hsla(0, 0%, 0%, 0.15);  */   
+    background-image: url(imag/Muneco.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: transparent;
+    border-radius: 24px;
+    color: #D8DFE8;
+    margin-left: 98px;
+    margin-top: 10px;
+    padding-left: 20px;
+    position: fixed;
+}
+
+.mensaje:focus {
+    outline: none;
+}
+
+.botones{
+    display: flex;
+    margin-top: 18px;
+}
+
+.btn-encriptar{
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.btn-desencriptar{
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.btn-copiar {
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 300px;
+    margin-top: 560px;
+    position: absolute;
+    width: 328px;
+}
+
+.informacion{
+    color: #ffffffc2;
+    font-size: 18px;
+}
+
+/* FOOTER */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0a66c2;
+  color: #ffffff;
+}
+
+.wrapper .alura:hover,
+.wrapper .alura:hover .tooltip,
+.wrapper .alura:hover .tooltip::before {
+  background: #0a3871;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.name-foot{
+  text-align: center;  
+  color: #FFFFFF;
+  font-size: 13px;
+  margin: 20px;
+}
+
+
+/* Media Query */
+@media screen and (max-width: 480px){
+  
+  *{
+    line-height: 100%;
+    box-sizing: border-box;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }   
+    
+      .botones {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+    
+      .btn-encriptar,
+      .btn-desencriptar{
+        width: 80%;
+        margin-top: 2%;
+      }
+      .btn-copiar{
+        margin: 10px auto;
+        width: 80%;
+        position: absolute;
+      }
+    }
