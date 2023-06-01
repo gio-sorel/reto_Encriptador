@@ -50,19 +50,19 @@ function copyToClipboard() {
 
   /* FUNCIÓN LÓGICA DEL CONTROL DEL MODO CIELO */
 
-  const daynight = document.getElementById('daynight');
-    daynight.addEventListener('input', () => {
-        let angle = 270 - ((270 / daynight.max) * (2*daynight.value));
-        let hue = 40 - ((40/daynight.max) * (2*daynight.value));
-        let light = daynight.value > 50 ? (100 - ((110/daynight.max) * daynight.value)) : 50;
-        if (angle < 0) angle = 0;
-        if (hue < 0) hue = 0;
-        if (light < 0) light = 0;
-        document.body.style.setProperty('--l', `${(((daynight.value - 0) * (60 - 40)) / (100 - 0) + 40)/100}`);
-        document.body.style.setProperty('--angle', `${angle}deg`);
-        document.body.style.setProperty('--hue1', `${hue}`);
-        document.body.style.setProperty('--light', `${light}%`);
-    });
+const daynight = document.getElementById('daynight');
+  daynight.addEventListener('input', () => {
+      let angle = 270 - ((270 / daynight.max) * (2*daynight.value));
+      let hue = 40 - ((40/daynight.max) * (2*daynight.value));
+      let light = daynight.value > 50 ? (100 - ((110/daynight.max) * daynight.value)) : 50;
+      if (angle < 0) angle = 0;
+      if (hue < 0) hue = 0;
+      if (light < 0) light = 0;
+      document.body.style.setProperty('--l', `${(((daynight.value - 0) * (60 - 40)) / (100 - 0) + 40)/100}`);
+      document.body.style.setProperty('--angle', `${angle}deg`);
+      document.body.style.setProperty('--hue1', `${hue}`);
+      document.body.style.setProperty('--light', `${light}%`);
+  });
 
 /* Init estrellas*/
 daynight.dispatchEvent(new Event('input'));
